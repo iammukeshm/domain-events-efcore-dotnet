@@ -31,7 +31,7 @@ public sealed class Order : Entity
 
         var order = new Order
         {
-            Id = Guid.NewGuid(),
+            Id = Guid.CreateVersion7(), // client-side id: handlers see it before the insert
             Number = number,
             Sku = sku,
             Quantity = quantity,
